@@ -1,0 +1,873 @@
+@import "partials/setup";
+@import "partials/variables";
+
+header{
+	background: url("../img/lake-morrain.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+	z-index: 1;
+	.wrapper{
+		padding: 3%;
+		.logo h1{
+			width: 100%;
+			margin: 0;
+			@include defineFont($raleway, 40px, 300);
+			letter-spacing: 2%;
+			color: #faa845;
+			text-shadow: -1px -1px 0 #063a76, 1px -1px 0 #063a76, -1px 1px 0 #063a76, 1px 1px 0 #063a76;
+		}
+		nav{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding-bottom: 2%;
+			border-bottom: 1px solid rgba(255,255,255,0.7);
+			ul{
+				display: flex;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				li{
+					@include defineFont($openSans, 20px, 300);
+					a{
+						text-decoration: none;
+						text-align: center;
+						color: white;
+						padding: 20px;
+						transition: all 0.5s; 
+						&:hover{
+							background: lighten(grey, 5);
+							opacity: 0.7;
+						}
+					}
+				}
+			}
+		}
+		.hero{
+			margin: 5% 0;
+			width: 100%;
+			h1{
+				@include defineFont($raleway, 40px, 300);
+				text-transform: uppercase;
+				letter-spacing: 5px;
+				text-align: center;
+				color: white;
+				margin: 0 auto;
+				margin-top: 15%;
+			}
+			span{
+				@include defineFont($raleway, 20px, 100);
+				br{
+					display: none;
+				}
+				a{
+					text-decoration: none;
+					color: white;
+					padding: 20px;
+				}
+			}
+			.mini-nav{
+				display: flex;
+				justify-content: center;
+				a.btn{
+					@include defineFont($openSans, 16px, 400);
+					width: 15%;
+					color: white;
+					margin: 5% 2%;
+				}
+			}
+		}
+	}
+}
+
+/* ------- Header Gradient CSS ------- */
+.default-gradient, .index-gradient, .about-gradient, .event-gradient, .contact-us-gradient, .media-gradient{
+	position: relative;
+	&:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+	}
+}
+
+.default-gradient::before{
+	background: linear-gradient(180deg, rgba(255, 255, 255, 1.0), rgba(255, 255, 255, 0.7));
+}
+.index-gradient::before{
+	background: linear-gradient(180deg, rgba(78, 151, 116, 1.0), rgba(37, 121, 126, 0.7));
+}
+
+.about-gradient::before{
+	background: linear-gradient(180deg, rgba(74, 163, 156, 1.0), rgba(106, 79, 131, 0.7));
+}
+
+.event-gradient::before{
+	background: linear-gradient(180deg, rgba(152, 35, 78, 0.7), rgba(44, 48, 103, 1.0));
+}
+
+.contact-us-gradient::before{
+	background: linear-gradient(180deg, rgba(9, 84, 190, 0.7), rgba(0, 128, 128, 1.0));
+}
+
+.media-gradient::before{
+	background: linear-gradient(180deg, rgba(50, 104, 114, 1.0), rgba(113, 60, 50, 0.7));
+}
+.wrapper{
+	max-width: 100vw;
+}
+
+main.wrapper{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+/*------ Mission Statement About Section -------*/
+.about-cysc{
+	padding: 5% 0;
+	.about-content{
+		display: flex;
+		flex-wrap: wrap;
+		.one-half{
+			padding: 2%;
+		}
+		.mission{
+			background: linear-gradient(90deg, #f5f6f5, #f5f6f5);
+			.content-border{
+				padding: 23% 10%;
+				border: 1px solid black;
+			}
+			blockquote.about-text{
+				@include defineFont($openSans, 16px, 300);
+				color: black;
+				padding: 0;
+				margin: 0;
+				text-align: justify;
+				position: relative;
+				margin: 20px 0;
+			}
+			blockquote.about-text::before{
+				content: '“';
+				font-size: 50px;
+				position: absolute;
+				top: -30px;
+				bottom: 0;
+				left: -5px;
+				right: 0;
+			}
+		}
+		.photo{
+			background: url("../img/mridangam.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			padding: 2%;
+			.content-border{
+				padding: 35% 20%;
+				border: 1px solid white;
+			}
+			img{
+				display: block;
+				width: 100%;
+				margin: 0;
+			}
+		}
+	}
+}
+
+/* -------- Membership Form --------*/
+.membership{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 5% 0;
+	.heading::before{
+		width: 20%;
+	}
+	.content{
+		@include defineFont($openSans, 16px, 400);
+		display: flex;
+		flex-wrap: wrap;
+		.membership-form{
+			background: linear-gradient(90deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../img/bharathanatyam.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			padding: 2%;
+			.content-border{
+				border: 1px solid white;
+				padding: calc(20% + 10px) 15%;
+				form{
+					width: 100%;
+					padding: 5%;
+					input[type=text], input[type=email], input[type=phone]{
+						width: 100%;
+						padding: 1%;
+						margin: 5px auto;
+					}
+					input[type=radio]{
+						margin: 0 1%;
+					}
+					label, p{
+						color: white;
+					}
+					.submit{
+						width: 15%;
+					}
+				}
+			}
+		}
+		.membership-info{
+			background: linear-gradient(90deg, #f5f6f5, #f5f6f5);
+			padding: 2%;
+			.content-border{
+				padding: 15%;
+				border: 1px solid black;
+				flex-direction: column;
+				align-items: left;
+			}
+		}
+	}
+}
+
+/* -------- About Section on About Page ---------*/
+.about{
+	padding: 5%;
+	.heading{
+		text-align: left;
+		&:before{
+			border-bottom: 2px solid rgba(106, 79, 131, 0.7);
+			text-align: left;
+			width: calc(10% - 25px);
+			margin: 0;
+			color: #7f7f7f;
+		}
+	}
+	p{
+		@include defineFont($openSans, 20px, 300);
+		color: #7f7f7f;
+	}
+}
+
+/* -------- Members Section on About Page--------*/
+.members{
+	padding: 5%;
+	.heading{
+		&:before{
+			border-bottom: 2px solid rgba(106, 79, 131, 0.7);
+			width: calc(10% - 25px);
+			color: #7f7f7f;
+		}
+	}
+	.member-photos{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		padding: 0 10%;
+		figure{
+			flex-wrap: wrap;
+			padding: 1%;
+			margin: 2% 0;
+			img{
+				width: 100%;
+				display: block;
+				margin: 0;
+			}
+			figcaption{
+				@include defineFont($openSans, 24px, 300);
+				text-transform: uppercase;
+				text-align: center;
+				margin: 10px 0;
+			}
+		}
+	}
+}
+
+/* ------- Events Page CSS --------*/
+.upcoming-events, .past-events{
+	padding: 5%;
+	flex-basis: 100%;
+	.heading::before{
+		border-bottom: 2px solid rgba(152, 35, 78, 1.0);
+	}
+	.heading{
+		span{
+			@include defineFont($openSans, 16px, 300);
+			width: 60%;
+			text-transform: none;
+			letter-spacing: 0;
+		}
+	}
+}
+
+/* -------- Upcoming Events Section ---------*/
+.upcoming-events{
+	.event{
+		display: flex;
+		flex-wrap: wrap;
+		.poster{
+			img{
+				width: 100%;
+				display: block;
+				margin: 0;
+			}
+		}
+		.details{
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			h3,h4{
+				text-align: center;
+				margin: 0;
+			}
+			h3{
+				@include defineFont($raleway, 24px, 300);
+				text-transform: uppercase;
+			}
+			h4{
+				@include defineFont($openSans, 16px, 300);
+				margin-top: 10px;
+			}
+		}
+	}
+}
+
+/* ------- Past Events Section --------*/
+.past-events{
+	.events{
+		width: 75%;
+		margin: 0 auto;
+		.content{
+			width: 100%;
+			img{
+				width: 100%;
+				margin: 0;
+			}
+		}
+	}
+	.mobile-events{
+		display: none;
+	}
+}
+/* -------- Contact Us Section ---------*/
+.contact-us{
+	padding: 5%;
+	flex-basis: 100%;
+	.heading::before{
+		border-bottom: 2px solid rgba(9, 84, 190, 0.7);
+		width: 7%;
+	}
+	.content{
+		display: flex;
+		flex-wrap: wrap;
+		.contact-form{
+			padding: 1%;
+			input[type=text], input[type=email], textarea{
+				padding: 1%;
+				margin: 1% 0;
+				width: 100%;
+				border: 1px solid gray;
+			}
+			textarea{
+				resize: none;
+			}
+			.row{
+				display: flex;
+				flex-wrap: wrap;
+				.captcha, .submit-area{
+					display: flex;
+					margin: 2% 0;
+				}
+				.captcha{
+					h3{
+						@include defineFont($openSans, 16px, 300);
+					}
+					.answer{
+						width: 20%;
+						height: 75%;
+						margin: 0 auto;
+						margin-left: 2%;
+					}
+				}
+				.submit-area{
+					justify-content: flex-end;
+					.submit{
+						background: rgba(9, 84, 190, 0.7);
+						box-shadow: 0 7px 0 darken(rgba(9, 84, 190, 0.7), 10);
+						width: 15%;
+						margin: 2%;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* ----------- Meida Page CSS ---------*/
+
+.gallery, .media-partners{
+	padding: 5%;
+	flex-basis: 100%;
+	.heading::before{
+		border-bottom: 2px solid #326872;
+		width: 7%;
+	}
+}
+
+.gallery{
+	.content{
+		.picture-gallery{
+			display: flex;
+			.thumbnail{
+				width: 100%;
+				display: block;
+			}
+			.gallery-name{
+				@include defineFont($raleway, 16px, 300);
+				text-transform: uppercase;
+				text-align: center;
+				margin: 1% 0;
+			}
+		}
+	}
+}
+
+.media-partners{
+	.content{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		figure{
+			margin: 0 auto;
+			img{
+				padding: 1%;
+				margin: 0 auto;
+				width: 50%;
+				display: block;
+			}
+			figcaption{
+				@include defineFont($openSans, 20px, 300);
+				text-transform: uppercase;
+				text-align: center;
+				margin: 5px 0;
+			}
+		}
+	}
+}
+
+.submit-success{
+	padding: 5%;
+	p{
+		@include defineFont($openSans, 18px, 300);
+		text-align: center;
+		margin: 0;
+	}
+}
+
+
+/* ------------ Footer CSS -------------*/
+footer.wrapper{
+	padding: 2%;
+	padding-bottom: 0;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	.content{
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		.one-third{
+			padding: 1%;
+			.logo{
+				@include defineFont($raleway, 40px, 400);
+				color: white;
+				letter-spacing: 5px;
+				margin: 0;
+			}
+			.footer-about{
+				@include defineFont($openSans, 20px, 300);
+				color: white;
+				margin: 0;
+			}
+		}
+		.social{
+			display: flex;
+			justify-content: flex-end;
+			flex-wrap: wrap;
+			h2{
+				@include defineFont($openSans, 46px, 300);
+				color: white;
+				margin: 0;
+			}
+			.social-nav{
+				display: flex;
+				justify-content: center;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				a{
+					display: block;
+					text-decoration: none;
+					padding: 2%;
+					font-size: 46px;
+					color: white;
+					padding-right: 20px;
+				}
+			}
+		}
+	}
+
+	.copyright{
+		border-top: 1px solid rgba(255,255,255, 0.7);
+		margin-top: 2%;
+		padding: 1%;
+		text-align: center;
+		p{
+			@include defineFont($openSans, 16px, 300);
+			color: white;
+			margin: 0;
+			margin-top: 1%;
+		}
+	}
+}
+
+
+/* -------- Reuseable Classes --------*/
+.heading{
+	@include defineFont($raleway, 32px, 400);
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	text-align: center;
+	color: black;
+	margin: 0;
+	margin-bottom: 3%;
+	position: relative;
+}
+
+.heading::before{
+	width: 10%;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: -15px;
+	border-bottom: 2px solid green;
+	margin: 0 auto;
+}
+.content-border{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn{
+	border: 2px solid #ffffff;
+	border-radius: 15px;
+	font-weight: 700;
+	text-decoration: none;
+	display: block;
+	padding: 15px;
+	text-align: center;
+	color: black;
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
+.submit{
+	background-color: green;
+	position: relative;
+	top: 0px;
+	color: #fff;
+	border: 0;
+	outline: 0;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0px 7px 0px darken(green, 10);
+	transition: all 0.5s;
+	margin-left: 20px;
+	text-align: center;
+	&:active{
+		background: darken(green, 15);
+		top: 5px;
+		box-shadow: 0 2px 2px darken(green, 20);
+	}
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
+
+/* -------- Media Queries --------*/
+@media screen and (min-height: 2200px){
+	header{
+		height: 35vh;
+	}
+}
+@media screen and (max-width: 1600px){
+	.about-cysc{
+		.about-content{
+			.photo .content-border{
+				border: none;
+			}
+		}
+	}
+
+	.membership{
+		padding-bottom: 0;
+		.content{
+			.membership-form{
+				flex-basis: 100%;
+				.content-border{
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					padding: 5%;
+					border: none;
+					form{
+						.submit{
+							margin-left: 20px;
+						}
+					}
+				}
+			}
+			.membership-info{
+				flex-basis: 100%;
+				.content-border{
+					padding: 5%;
+				}
+			}
+		}
+	}
+
+	footer.wrapper{
+		.content{
+			.one-third{
+				.logo{
+					margin: 5% 0;
+					text-align: center;
+				}
+			}
+			.social{
+				h2{
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 1300px){
+	footer.wrapper{
+		.content{
+			.one-third{
+				.logo{
+					font-size: 32px;
+				}
+			}
+			.social{
+				h2{
+					font-size: 32px;
+				}
+				a{
+					font-size: 32px;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 1200px){
+	header{
+		height: 75vh;
+		.wrapper{
+			nav{
+				ul{
+					li{
+						a{
+							font-size: 18px;
+							&:hover{
+								background: none;
+								opacity: 1;
+								text-decoration: underline;
+								padding-bottom: 2px;
+							}
+						}
+					} 
+				}			
+			}
+			.hero{
+				span br{
+					display: block;
+				}
+				span a{
+					padding: 10px;
+				}
+				.mini-nav{
+					a.btn{
+						width: 30%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1000px){
+	span.bullet{
+		display: none;
+	}
+
+	.captcha h3{
+		font-size: 14px;
+	}
+}
+@media screen and (max-width: 800px){
+	.upcoming-events{
+		.event{
+			.poster, .details{
+				flex-basis: 100%;
+				margin: 5% 0;
+			}
+			.details{
+				h3{
+					font-size: 20px;
+				}
+			}
+		}
+	}
+	.past-events{
+		.events{
+			display: none;
+		}
+		.mobile-events{
+			display: block;
+			img{
+				width: 100%;
+				margin: 5% auto;
+			}
+		}
+	}
+	.contact-us{
+		.content{
+			.three-fourth{
+				flex-basis: 100%;
+			}
+			.contact-form{
+				.row{
+					.captcha, .submit-area{
+						flex-basis: 100%;
+					}
+					.submit-area{
+						justify-content: center;
+						.submit{
+							width: 30%;
+							margin: 5px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 500px){
+	header{
+		height: 50vh;
+		.wrapper{
+			nav{
+				padding: 10px 0;
+				ul{
+					margin-bottom: 10px;
+					li{
+						a{
+							padding: 10px;
+							margin: 0 5px;
+							font-size: 14px;
+						}
+					}
+				}
+			}
+			.hero{
+				h1{
+					font-size: 28px;
+					span{
+						font-size: 16px;
+					}
+				}
+				span a{
+					padding: 10px;
+				}
+				.mini-nav{
+					a.btn{
+						width: 40%;
+					}
+				}
+			}
+		}
+	}
+	
+	.heading{
+		font-size: 24px;
+		margin-bottom: 10%;
+	}
+
+	.membership .content .membership-form .content-border form .submit{
+		margin: 10% auto;
+		width: 40%;
+	}
+
+	.media-partners{
+		.content{
+			figure{
+				img{
+					width: 80%;
+				}
+			}
+		}
+	}
+
+	.one-half, .one-third, .one-fourth{
+		flex-basis: 100%;
+	}
+
+	.logo{
+		text-align: center;
+	}
+
+	footer.wrapper{
+		.content{
+			.one-third{
+				.footer-about{
+					font-size: 16px;
+				}
+			}
+			.social{
+				h2{
+					font-size: 24px;
+					text-align: center;
+					margin: 5% 0;
+				}
+				.social-nav{
+					justify-content: center;
+					align-items: center;
+					margin: 0 auto;
+					text-align: center;
+					a{
+						font-size: 24px;
+						text-align: center;
+					}
+				}
+			}
+		}
+		.copyright p{
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
+
+}

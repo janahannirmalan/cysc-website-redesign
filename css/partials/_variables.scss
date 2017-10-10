@@ -1,0 +1,10 @@
+$kalam : "Kalam", cursive;
+$openSans : "Open Sans", sans-serif;
+$raleway : "Raleway", serif;
+
+/* ----- Define font mixin sets arguments for fonts -----*/
+@mixin defineFont($fontName, $fontSize, $fontWeight){
+	font-family: $fontName;
+	font-size: $fontSize;
+	font-weight: $fontWeight;
+}

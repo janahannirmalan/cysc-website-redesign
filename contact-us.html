@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contact Us</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+		<div class="wrapper">
+			<nav>
+				<ul>
+					<li><a class="" id="#home" href="./index.html">Home</a></li>
+					<li><a class="" id="#about" href="./about-us.html">About</a></li>
+					<li><a id="#events" href="./events.html">Events</a></li>
+					<li><a id="contact" href="./contact-us.html">Contact Us</a></li>
+					<li><a id="media" href="./media.html">Media</a></li>
+				</ul>
+			</nav>
+			<div class="hero">
+				<h1>Carnatic Youth Society of Canada<br><span><a href="#contact-us">Questions?</a></span></h1>
+			</div>
+		</div>
+	</header>
+	<main class="wrapper">
+		<section id="contact-us" class="contact-us">
+			<h2 class="heading">Questions?</h2>
+			<div class="content">
+				<div class="three-fourth contact-form">
+					<form id="contact-form">
+						<label for="name" class="sr-only">Full Name</label>
+						<input type="text" id="name" name="Full Name" placeholder="Full Name">
+						
+						<label for="email" class="sr-only">Email Address</label>
+						<input type="email" id="email" name="Email" placeholder="Email Address">
+						
+						<label for="subject" class="sr-only">Subject</label>
+						<input type="text" id="subject" name="Subject" placeholder="Subject">
+
+						<label for="message" class="sr-only">Message</label>
+						<textarea id="message" name="Message" cols="30" rows="4" placeholder="Message"></textarea>
+						
+						<div class="row">
+							<div class="captcha one-fourth">
+								<h3>
+									Captcha:
+									<span id="firstNum"></span> + 
+									<span id="secondNum"></span> =
+								</h3>
+								<label for="answer" class="sr-only">Answer</label>
+								<input id="answer" class="answer" type="text">
+							</div>
+							<div class="submit-area three-fourth">
+								<button class="submit" onclick="submitForm()">Submit</button>
+								<button class="submit" onclick="reset('contact-form');">Reset</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="one-fourth">
+					<p id="data"></p>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="wrapper">
+		<div class="content">
+			<div class="one-third">
+				<h2 class="logo">CYSC</h2>
+			</div>
+			<div class="one-third">
+				<p class="footer-about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, sapiente? Ipsum perferendis inventore sint modi. Odit animi dolore, earum numquam, ea sint? Reprehenderit laborum, ipsam, mollitia repudiandae sed officia alias.</p>
+			</div>
+			<div class="one-third social">
+				<div class="one-half">
+					<h2>Follow us</h2>
+				</div>
+				<div class="one-half">
+					<ul class="social-nav">
+						<li>
+							<a href="http://www.facebook.com/cyscanada">
+								<i class="fa fa-facebook"></i>
+								<span class="sr-only">Facebook</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://www.twitter.com/cyscanada">
+								<i class="fa fa-twitter"></i>
+								<span class="sr-only">Twitter</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://www.instagram.com/cyscanada">
+								<i class="fa fa-instagram"></i>
+								<span class="sr-only">Instagram</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+			<p>&copy; Copyright 2017 - Carnatic Youth Society of Canada | Design: VS | Janahan Nirmalan</p>
+		</div>
+	</footer>
+	<script src="https://use.fontawesome.com/c1528a04cf.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
+	<script src="js/web.js"></script>
+</body>
+</html>
