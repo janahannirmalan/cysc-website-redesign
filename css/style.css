@@ -980,19 +980,21 @@ footer.wrapper {
     font-size: 32px; } }
 
 @media screen and (max-width: 1200px) {
-  header .wrapper nav ul li a {
-    font-size: 18px; }
-    header .wrapper nav ul li a:hover {
-      background: none;
-      opacity: 1;
-      text-decoration: underline;
-      padding-bottom: 2px; }
-  header .wrapper .hero span br {
-    display: block; }
-  header .wrapper .hero span a {
-    padding: 10px; }
-  header .wrapper .hero .mini-nav a.btn {
-    width: 30%; } }
+  header {
+    height: 75vh; }
+    header .wrapper nav ul li a {
+      font-size: 18px; }
+      header .wrapper nav ul li a:hover {
+        background: none;
+        opacity: 1;
+        text-decoration: underline;
+        padding-bottom: 2px; }
+    header .wrapper .hero span br {
+      display: block; }
+    header .wrapper .hero span a {
+      padding: 10px; }
+    header .wrapper .hero .mini-nav a.btn {
+      width: 30%; } }
 
 @media screen and (max-width: 1000px) {
   span.bullet {
