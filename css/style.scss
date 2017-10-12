@@ -684,7 +684,6 @@ footer.wrapper{
 }
 @media screen and (max-width: 1200px){
 	header{
-		height: 75vh;
 		.wrapper{
 			nav{
 				ul{
@@ -777,7 +776,6 @@ footer.wrapper{
 }
 @media screen and (max-width: 500px){
 	header{
-		height: 50vh;
 		.wrapper{
 			nav{
 				padding: 10px 0;
@@ -785,7 +783,6 @@ footer.wrapper{
 					margin-bottom: 10px;
 					li{
 						a{
-							padding: 10px;
 							margin: 0 5px;
 							font-size: 14px;
 						}

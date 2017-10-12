@@ -980,21 +980,19 @@ footer.wrapper {
     font-size: 32px; } }
 
 @media screen and (max-width: 1200px) {
-  header {
-    height: 75vh; }
-    header .wrapper nav ul li a {
-      font-size: 18px; }
-      header .wrapper nav ul li a:hover {
-        background: none;
-        opacity: 1;
-        text-decoration: underline;
-        padding-bottom: 2px; }
-    header .wrapper .hero span br {
-      display: block; }
-    header .wrapper .hero span a {
-      padding: 10px; }
-    header .wrapper .hero .mini-nav a.btn {
-      width: 30%; } }
+  header .wrapper nav ul li a {
+    font-size: 18px; }
+    header .wrapper nav ul li a:hover {
+      background: none;
+      opacity: 1;
+      text-decoration: underline;
+      padding-bottom: 2px; }
+  header .wrapper .hero span br {
+    display: block; }
+  header .wrapper .hero span a {
+    padding: 10px; }
+  header .wrapper .hero .mini-nav a.btn {
+    width: 30%; } }
 
 @media screen and (max-width: 1000px) {
   span.bullet {
@@ -1035,24 +1033,21 @@ footer.wrapper {
       margin: 5px; } }
 
 @media screen and (max-width: 500px) {
-  header {
-    height: 50vh; }
-    header .wrapper nav {
-      padding: 10px 0; }
-      header .wrapper nav ul {
-        margin-bottom: 10px; }
-        header .wrapper nav ul li a {
-          padding: 10px;
-          margin: 0 5px;
-          font-size: 14px; }
-    header .wrapper .hero h1 {
-      font-size: 28px; }
-      header .wrapper .hero h1 span {
-        font-size: 16px; }
-    header .wrapper .hero span a {
-      padding: 10px; }
-    header .wrapper .hero .mini-nav a.btn {
-      width: 40%; }
+  header .wrapper nav {
+    padding: 10px 0; }
+    header .wrapper nav ul {
+      margin-bottom: 10px; }
+      header .wrapper nav ul li a {
+        margin: 0 5px;
+        font-size: 14px; }
+  header .wrapper .hero h1 {
+    font-size: 28px; }
+    header .wrapper .hero h1 span {
+      font-size: 16px; }
+  header .wrapper .hero span a {
+    padding: 10px; }
+  header .wrapper .hero .mini-nav a.btn {
+    width: 40%; }
   .heading {
     font-size: 24px;
     margin-bottom: 10%; }
