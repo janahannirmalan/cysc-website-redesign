@@ -1040,6 +1040,7 @@ footer.wrapper {
     header .wrapper nav ul {
       margin-bottom: 10px; }
       header .wrapper nav ul li a {
+        padding: 5px;
         margin: 0 5px;
         font-size: 14px; }
   header .wrapper .hero h1 {
